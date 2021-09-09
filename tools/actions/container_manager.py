@@ -148,7 +148,7 @@ def start(args):
             tools.helpers.run.user(args, command, check=False)
 
         # Set permissions
-        set_permissions()
+        #set_permissions()
         
         helpers.lxc.start(args)
         session_cfg["session"]["state"] = helpers.lxc.status(args)
