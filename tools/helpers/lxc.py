@@ -256,6 +256,10 @@ def make_base_props(args):
                 props.pop(idx)
         props.append(k+"="+v)
 
+    props.append("ro.lmk.low=1001")
+    props.append("ro.lmk.medium=1001")
+    props.append("ro.lmk.critical=1001")
+
     base_props = open(args.work + "/waydroid_base.prop", "w")
     for prop in props:
         base_props.write(prop + "\n")
